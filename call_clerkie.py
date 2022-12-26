@@ -1,12 +1,14 @@
 import requests
 from rich import print
 from rich.console import Console
+import os
 
 # Set the base URL of the Flask app
 base_url = "https://clerkieserverchromeextensionv1.krrishdholakia.repl.co/"
+error_log_path = os.path.expanduser("~") + "/.clerkie-cli/clerkie-src/c.log"
 
 def debug_terminal():
-  f = open('c.log','r')
+  f = open(error_log_path,'r')
   i = 0
   error_msg =""
   for line in f:
@@ -17,7 +19,7 @@ def debug_terminal():
   f.close()
 
   # clear file
-  f = open('c.log','w')
+  f = open(error_log_path,'w')
   f.seek(0)
   f.close()
 
