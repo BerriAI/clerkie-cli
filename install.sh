@@ -4,7 +4,6 @@ echo "Starting clerkie-cli install"
 
 python3 -m pip install requests
 python3 -m pip install rich
-python3 -m pip install os
 
 echo "Done pip installs"
 
