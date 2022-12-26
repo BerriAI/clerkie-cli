@@ -1,1 +1,3 @@
-echo "Starting Clerkie Install"
+set -e
+
+echo "Starting clerkie-cli install"
