@@ -12,7 +12,7 @@ main() {
     CLERKIE_DIR=$HOME/.clerkie-cli
     mkdir -p $CLERKIE_DIR
 
-    RELEASE_URL="https://github.com/ishaan-jaff/clerkie-cli/archive/refs/tags/v0.0.1-beta.zip"
+    RELEASE_URL="https://github.com/ishaan-jaff/clerkie-cli/archive/refs/tags/v0.0.2-beta.zip"
     echo "$RELEASE_URL"
 
     echo "downloading latest release in $CLERKIE_DIR"
