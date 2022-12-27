@@ -31,9 +31,21 @@ main() {
       echo "Error: No folder found in the current working directory."
     fi
 
+    if [[ -n $ZSH_VERSION ]]; then
+       PROFILE=$HOME/.zshrc
+
+    elif [[ -n $BASH_VERSION ]]; then
+      PROFILE=$HOME/.bashrc
+
+    elif [[ -n $FISH_VERSION ]]; then
+      PROFILE=$HOME/.config/fish/config.fish
+
+    elif [[ -n $ASH_VERSION ]]; then
+      PROFILE=$HOME/.profile
+
     echo "# clerkie-cli configs" >>$HOME/.zshrc
-    echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$HOME/.zshrc
-    echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$HOME/.zshrc
+    echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$PROFILE
+    echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$PROFILE
     echo "Clerkie Installed. Open a new Terminal Window to start using"
     cd $START
 }
