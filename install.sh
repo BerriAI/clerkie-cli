@@ -32,24 +32,19 @@ main() {
     fi
 
     if [[ -n $ZSH_VERSION ]]; then
-      PROFILE=$HOME/.zshrc
+      echo "# clerkie-cli configs" >>$HOME/.zshrc
+      echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$HOME/.zshrc
+      echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$HOME/.zshrc
 
     elif [[ -n $BASH_VERSION ]]; then
-      PROFILE=$HOME/.bashrc
+      echo "# clerkie-cli configs" >>$HOME/.bashrc
+      echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$HOME/.bashrc
+      echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$HOME/.bashrc
 
-    elif [[ -n $FISH_VERSION ]]; then
-      PROFILE=$HOME/.config/fish/config.fish
-
-    elif [[ -n $ASH_VERSION ]]; then
-      PROFILE=$HOME/.profile
     else
-      echo "You are not using a recognized shell. We only support zsh, bash, fish, ash"
+      echo "You are not using a recognized shell. We only support zsh, bash"
     fi
 
-    chmod +x $PROFILE
-    echo "# clerkie-cli configs" >>$PROFILE
-    echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$PROFILE
-    echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$PROFILE
     echo "Clerkie Installed. Open a new Terminal Window to start using"
     cd $START
 }
