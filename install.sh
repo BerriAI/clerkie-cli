@@ -32,7 +32,7 @@ main() {
     fi
 
     if [[ -n $ZSH_VERSION ]]; then
-       PROFILE=$HOME/.zshrc
+      PROFILE=$HOME/.zshrc
 
     elif [[ -n $BASH_VERSION ]]; then
       PROFILE=$HOME/.bashrc
@@ -46,6 +46,7 @@ main() {
       echo "You are not using a recognized shell. We only support zsh, bash, fish, ash"
     fi
 
+    chmod +x $PROFILE
     echo "# clerkie-cli configs" >>$PROFILE
     echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$PROFILE
     echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$PROFILE
