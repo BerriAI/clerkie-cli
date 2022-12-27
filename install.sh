@@ -46,7 +46,7 @@ main() {
       echo "You are not using a recognized shell. We only support zsh, bash, fish, ash"
     fi
 
-    echo "# clerkie-cli configs" >>$HOME/.zshrc
+    echo "# clerkie-cli configs" >>$PROFILE
     echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$PROFILE
     echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$PROFILE
     echo "Clerkie Installed. Open a new Terminal Window to start using"
