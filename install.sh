@@ -42,6 +42,9 @@ main() {
 
     elif [[ -n $ASH_VERSION ]]; then
       PROFILE=$HOME/.profile
+    else
+      echo "You are not using a recognized shell. We only support zsh, bash, fish, ash"
+    fi
 
     echo "# clerkie-cli configs" >>$HOME/.zshrc
     echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$PROFILE
