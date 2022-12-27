@@ -2,6 +2,7 @@
 
 Clerkie-cli is a terminal tool that uses a large language model (LLM) to provide suggestions and assistance when you encounter errors in your code. It is designed to help developers of all skill levels improve their productivity and efficiency by providing them with quick and accurate solutions to common coding problems.
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/clerkieai)
 ## **Features**
 
 - Analyzes stack traces in any programming language and provides explanations and suggested fixes
