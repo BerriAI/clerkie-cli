@@ -25,9 +25,8 @@ This will download and install the latest version of Clerkie-cli on your machine
 
 Clerkie-cli automatically runs whenever it notices an error in your terminal. Simply run your code as you normally would, and if an error occurs, Clerkie-cli will provide you with an explanation of the error and suggest potential fixes.
 
-![carbon.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e2f2ffa1-12bb-451c-9ca9-526e95fbf3de/carbon.png)
-
-![carbon (2).png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e8035649-9989-4efd-b035-7fc28219a1d1/carbon_(2).png)
+![carbon](https://user-images.githubusercontent.com/29436595/209611631-91a4d559-7810-42c9-8584-b3a8e1b794ac.png)
+![carbon (2)](https://user-images.githubusercontent.com/29436595/209611683-f7cd91de-d889-4e11-9123-ec23393adaf6.png)
 
 Clerkie-cli will then provide you with an explanation of the error and suggest potential fixes.
 
@@ -39,7 +38,6 @@ Open ~/.zshrc and delete the following lines (you can edit zshrc using vi ~/.zsh
 # clerkie-cli configs
 export CLERKIE_SRC=/Users/daddyish/.clerkie-cli/clerkie-src
 [[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"
-~
 ```
 
 ## **Support**
@@ -47,6 +45,7 @@ export CLERKIE_SRC=/Users/daddyish/.clerkie-cli/clerkie-src
 If you have any questions or need help using Clerkie-cli, you can reach out to us through the following channels:
 
 - **[GitHub](https://github.com/ishaan-jaff/clerkie-cli)**
-- **[Email](mailto:support@clerkie.com)**
+- [**Discord**](https://discord.gg/KvG3azf39U)
+- [**Twitter**](https://twitter.com/ishaan_jaff)
 
 We are always happy to help!
