@@ -50,3 +50,11 @@ If you have any questions or need help using Clerkie-cli, you can reach out to u
 - [**Twitter**](https://twitter.com/ishaan_jaff)
 
 We are always happy to help!
+
+## **Testimonials**
+We have been Featured in 
+[Ben Tossel's AI Newsletter](https://www.bensbites.co/p/new-search-town)
+[User Testimonial](https://twitter.com/Scobleizer/status/1607910994122264577?s=20&t=icpkdZvneN8gH92-03bimw)
+[User Testimonial](https://twitter.com/aaditya_ai/status/1608145850219515905?s=20&t=icpkdZvneN8gH92-03bimw)
+[User Testimonial](https://twitter.com/avaa411/status/1608008322447441921?s=20&t=icpkdZvneN8gH92-03bimw)
+
