@@ -1,8 +1,8 @@
-LOG_FILE=$CLERKIE_SRC/c.log
-SCRIPT_PATH=$CLERKIE_SRC/call_clerkie.py
+LOG_FILE="$CLERKIE_SRC/c.log"
+SCRIPT_PATH="$CLERKIE_SRC/call_clerkie.py"
 
 setup_capture_hook() {
-    exec 2> >(tee $LOG_FILE)
+    exec 2> >(tee "$LOG_FILE")
     echo "Clerkie Activated."
 }
 
