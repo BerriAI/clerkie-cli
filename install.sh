@@ -7,6 +7,23 @@ python3 -m pip install rich
 
 echo "Done pip installs"
 
+read_email() {
+  valid=0
+  while [ $valid -eq 0 ]; do
+    tput setaf 2
+    echo "Please enter your email address:"
+    tput sgr0
+    read email
+    if [[ $email =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
+      valid=1
+      echo "Thank you. The email address $email is valid."
+      echo "$email" >>$HOME/.clerkie-cli/clerkie-src/clerkie.txt
+    else
+      echo "Error: The email address $email is not valid. Please try again."
+    fi
+  done
+}
+
 main() {
     CLERKIE_DIR=$HOME/.clerkie-cli
     START=$PWD
@@ -32,6 +49,7 @@ main() {
     fi
 
     echo "# clerkie-cli configs" >>$HOME/.zshrc
+    read_email
     echo "export CLERKIE_SRC=$CLERKIE_DIR/clerkie-src" >>$HOME/.zshrc
     echo '[[ -f "$HOME/.clerkie-cli/clerkie-src/setup.sh" ]] && builtin source "$HOME/.clerkie-cli/clerkie-src/setup.sh"' >>$HOME/.zshrc
     echo "Clerkie Installed. Open a new Terminal Window to start using"
