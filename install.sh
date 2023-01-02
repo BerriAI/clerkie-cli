@@ -24,13 +24,24 @@ read_email() {
   done
 }
 
+get_latest_release() {
+  REPO_OWNER="ishaan-jaff"
+  REPO_NAME="clerkie-cli"
+  local RELEASE_INFO=$(curl -s https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/latest)
+  local RELEASE_URL=$(echo "$RELEASE_INFO" | grep '"zipball_url":' | sed -E 's/.*"([^"]+)".*/\1/')
+  echo "$RELEASE_URL"
+}
+
+
+
 main() {
     CLERKIE_DIR=$HOME/.clerkie-cli
     START=$PWD
+    rm -rf $CLERKIE_DIR
     mkdir -p $CLERKIE_DIR
     cd $CLERKIE_DIR
 
-    RELEASE_URL="https://github.com/ishaan-jaff/clerkie-cli/archive/refs/tags/v0.0.2-beta.zip"
+    RELEASE_URL=$(get_latest_release)
     echo "$RELEASE_URL"
 
     echo "downloading latest release in $CLERKIE_DIR"
