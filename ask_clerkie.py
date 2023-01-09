@@ -22,7 +22,7 @@ def user_q():
 
   with console.status("[bold green] Clerkie Thinking :robot:") as status:
       while not returned:
-        response = requests.get(base_url + "/term", params={"user_query": user_query, "user_id": user_id})
+        response = requests.get(base_url + "/question", params={"user_query": user_query, "user_id": user_id})
         returned = True
 
   # Check the status code of the response
@@ -37,5 +37,3 @@ def user_q():
 
 
 clerkie_resp = user_q()
-
-
