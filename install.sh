@@ -25,7 +25,7 @@ read_email() {
 }
 
 get_latest_release() {
-  REPO_OWNER="ishaan-jaff"
+  REPO_OWNER="ClerkieAI"
   REPO_NAME="clerkie-cli"
   local RELEASE_INFO=$(curl -s https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/latest)
   local RELEASE_URL=$(echo "$RELEASE_INFO" | grep '"zipball_url":' | sed -E 's/.*"([^"]+)".*/\1/')
