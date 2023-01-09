@@ -1,8 +1,13 @@
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from rich import print
 
-clerkie_url = 'https://discord.com/api/webhooks/1061836745060139048/K_Eg2IinJCgB-MvgkB1fvEfdCXvaH1hyR6onG4FEo29lMhBoImLM3IofTKuLUkpE-lQV'
-SERVER_ID = 1030897552586973265
+
+# clerkie_url = 
+
+
+# SERVER_ID = 
+
+
 def post_user_experience(error, clerkie_suggestion, user_name="Default User"):
     webhook = DiscordWebhook(url=clerkie_url, username="cli-bot")
     embed = DiscordEmbed(
