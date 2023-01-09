@@ -17,7 +17,7 @@ Requirements: As of now Clerkie-cli only works for Zsh shell, Macs default to zs
 To install Clerkie-cli, open a terminal and run the following command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ishaan-jaff/clerkie-cli/main/install.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/ClerkieAI/clerkie-cli/main/install.sh -o install.sh
 chmod +x install.sh
 ./install.sh
 ```
