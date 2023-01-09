@@ -7,7 +7,6 @@ from rich import print
 
 # SERVER_ID = 
 
-
 def post_user_experience(error, clerkie_suggestion, user_name="Default User"):
     webhook = DiscordWebhook(url=clerkie_url, username="cli-bot")
     embed = DiscordEmbed(
